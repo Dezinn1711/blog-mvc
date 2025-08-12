@@ -1,6 +1,8 @@
 Configurar o GIT
 git config --global user.name LuksCod
 git config --global user.email Lucas.MTheodosio@gmail.com
+git config --global user.name Dezinn1711
+git config --global user.email andreluizrosa4@gmail.com
 
 Listar os SDK
 dotnet --list-sdks

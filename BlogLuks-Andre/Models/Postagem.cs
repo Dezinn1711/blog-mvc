@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BlogLuks_Andre.Models;
 
 public class Postagem
@@ -23,8 +25,5 @@ public class Postagem
     public string Foto { get; set; }
 
     public string Thumbnail { get; set; }
-
-    
-
 }
 
