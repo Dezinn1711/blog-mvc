@@ -30,6 +30,10 @@ public class HomeController : Controller
 
         Categoria netero = new (4,"Isacc Netero");
 
+        Categoria gon = new (5,"Gon Freecss");
+
+        Categoria chrollo = new (5,"Chrollo Lucilfer");
+
         List<Postagem> postagens = [
             new (){
                 Id = 1,
@@ -72,13 +76,41 @@ public class HomeController : Controller
                 CategoriaId = 4,
                 Categoria = netero,
                 DataPostagem = DateTime.Parse("07/08/2025"),
-                Descricao = "Netero é um velho muito forte, que lutou contra o Rei Meruem",
+                Descricao = "Netero é Foda. E lutou contra o Rei Meruem",
                 Texto = "Lorem ipsum",
                 Thumbnail = "/img/4.jpg",
                 Foto = "/img/4.jpg"
+            },
+            new (){
+                Id = 5,
+                Nome = "Gon Freecss",
+                CategoriaId = 5,
+                Categoria = gon,
+                DataPostagem = DateTime.Parse("07/08/2025"),
+                Descricao = "Jovem Prodigio, filho do Homem mais forte do Mundo.",
+                Texto = "Lorem ipsum",
+                Thumbnail = "/img/5.jpg",
+                Foto = "/img/5.jpg"
+            },
+
+            new (){
+                Id = 6,
+                Nome = "Chrollo Lucilfer",
+                CategoriaId = 6,
+                Categoria = chrollo,
+                DataPostagem = DateTime.Parse("07/08/2025"),
+                Descricao = "Jovem Prodigio, filho do Homem mais forte do Mundo.",
+                Texto = "Lorem ipsum",
+                Thumbnail = "/img/6.jpg",
+                Foto = "/img/6.jpg"
             }
         ]; 
         return View(postagens);
+    }
+
+    public IActionResult Postagem()
+    {
+        return View();
     }
 
     public IActionResult Privacy()
