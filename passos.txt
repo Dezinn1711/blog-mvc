@@ -12,4 +12,4 @@ dotnet new mvc -o BlogLuks-Andre
 
 Executar o projeto
 cd BlogLuks-Andre
-dotnet watch run
+dotnet watch run    

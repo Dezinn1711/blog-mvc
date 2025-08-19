@@ -12,34 +12,29 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        Categoria Hisoka = new();
-        Hisoka.Id = 1;
-        Hisoka.Nome = "Hisoka Morrow";
+    
+        Categoria Lutador = new(1, "Hisoka Morrow"); 
 
-        Categoria killua = new() 
-        {
-            Id= 2,
-            Nome = "Killua Zoldyck"
-        };
+        Categoria Assassino = new(2, "Killua Zoldyck");
 
-        Categoria kurapika = new (3,"Kurapika");
+        Categoria Corrente = new (3,"Kurapika");
 
-        Categoria netero = new (4,"Isacc Netero");
+        Categoria Velho = new (4,"Isacc Netero");
 
-        Categoria gon = new (5,"Gon Freecss");
+        Categoria Protagonista = new (5,"Gon Freecss");
 
-        Categoria chrollo = new (6,"Chrollo Lucilfer");
+        Categoria Líder = new (6,"Chrollo Lucilfer");
        
 
         postagens = [
             new (){
                 Id = 1,
-                Nome = "Hisoka Morrow ",
+                Nome = "Hisoka Morrow",
                 CategoriaId = 1,
-                Categoria = Hisoka,
+                Categoria = Lutador,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Hisoka é um caçador que é viciado em lutar e fica procurando pessoas fortes para ter um duelo",
-                Texto = "Lorem ipsum",
+                Texto = "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
                 Thumbnail = "/img/1.jpg",
                 Foto = "/img/1.jpg"
             },
@@ -48,10 +43,10 @@ public class HomeController : Controller
                 Id = 2,
                 Nome = "Killua Zoldyck ",
                 CategoriaId = 2,
-                Categoria = killua,
+                Categoria = Assassino,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Killua veio de uma fámilia assassina e gosta muito de seu amigo Gon",
-                Texto = "Lorem ipsum",
+                Texto = "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
                 Thumbnail = "/img/2.jpg",
                 Foto = "/img/2.jpg"
             },
@@ -60,10 +55,10 @@ public class HomeController : Controller
                 Id = 3,
                 Nome = "Kurapika",
                 CategoriaId = 3,
-                Categoria = kurapika,
+                Categoria = Corrente,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Kurapika quer vingança pela seu clã que foi morto pela trupe fantasma",
-                Texto = "Lorem ipsum",
+                Texto = "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
                 Thumbnail = "/img/3.jpg",
                 Foto = "/img/3.jpg"
             },
@@ -71,10 +66,10 @@ public class HomeController : Controller
                 Id = 4,
                 Nome = "Isaac Netero",
                 CategoriaId = 4,
-                Categoria = netero,
+                Categoria = Velho,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Netero é Foda. E lutou contra o Rei Meruem",
-                Texto = "Lorem ipsum",
+                Texto = "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
                 Thumbnail = "/img/4.jpg",
                 Foto = "/img/4.jpg"
             },
@@ -82,10 +77,10 @@ public class HomeController : Controller
                 Id = 5,
                 Nome = "Gon Freecss",
                 CategoriaId = 5,
-                Categoria = gon,
+                Categoria = Protagonista,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Jovem Prodigio, filho do Homem mais forte do Mundo.",
-                Texto = "Lorem ipsum",
+                Texto = "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
                 Thumbnail = "/img/5.jpg",
                 Foto = "/img/5.jpg"
             },
@@ -94,10 +89,10 @@ public class HomeController : Controller
                 Id = 6,
                 Nome = "Chrollo Lucilfer",
                 CategoriaId = 6,
-                Categoria = chrollo,
+                Categoria = Líder,
                 DataPostagem = DateTime.Parse("07/08/2025"),
                 Descricao = "Copia e Cola.",
-                Texto = "Lorem ipsum",
+                Texto = "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
                 Thumbnail = "/img/6.jpg",
                 Foto = "/img/6.jpg"
             }
