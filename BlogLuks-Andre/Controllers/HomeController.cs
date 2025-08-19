@@ -7,15 +7,11 @@ namespace BlogLuks_Andre.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private List<Postagem> postagens;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-    }
-
-    public IActionResult Index()
-    {
-        //Criar objetos
         Categoria Hisoka = new();
         Hisoka.Id = 1;
         Hisoka.Nome = "Hisoka Morrow";
@@ -26,15 +22,16 @@ public class HomeController : Controller
             Nome = "Killua Zoldyck"
         };
 
-        Categoria kurapika = new (3,"kurapika");
+        Categoria kurapika = new (3,"Kurapika");
 
         Categoria netero = new (4,"Isacc Netero");
 
         Categoria gon = new (5,"Gon Freecss");
 
-        Categoria chrollo = new (5,"Chrollo Lucilfer");
+        Categoria chrollo = new (6,"Chrollo Lucilfer");
+       
 
-        List<Postagem> postagens = [
+        postagens = [
             new (){
                 Id = 1,
                 Nome = "Hisoka Morrow ",
@@ -99,18 +96,28 @@ public class HomeController : Controller
                 CategoriaId = 6,
                 Categoria = chrollo,
                 DataPostagem = DateTime.Parse("07/08/2025"),
-                Descricao = "Jovem Prodigio, filho do Homem mais forte do Mundo.",
+                Descricao = "Copia e Cola.",
                 Texto = "Lorem ipsum",
                 Thumbnail = "/img/6.jpg",
                 Foto = "/img/6.jpg"
             }
         ]; 
+    }
+
+    public IActionResult Index()
+    {
+        
         return View(postagens);
     }
 
-    public IActionResult Postagem()
+    public IActionResult Postagem(int id)
     {
-        return View();
+        var postagem = postagens
+            .Where(p => p.Id == id)
+            .SingleOrDefault();
+        if(postagem == null)
+            return NotFound();
+        return View(postagem);
     }
 
     public IActionResult Privacy()
