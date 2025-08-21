@@ -31,3 +31,38 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.img-postagem {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+.dark-mode .navbar,
+.dark-mode .footer,
+.dark-mode .border-bottom,
+.dark-mode .bg-white {
+    background-color: #1e1e1e !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .nav-link,
+.dark-mode .navbar-brand,
+.dark-mode a {
+    color: #80d4ff !important;
+}
+
+.dark-mode .card {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode .form-check-input {
+    background-color: #444;
+    border-color: #666;
+}

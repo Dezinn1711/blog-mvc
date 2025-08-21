@@ -14,7 +14,7 @@
                     @Model.DataPostagem.ToString("dd 'de' MMMM 'de' yyyy")
                 </p>
                 <p>@Model.Descricao</p>
-                <img src="@Model.Foto" class="img-fluid mb-3" alt="@Model.Nome">
+                <img src="@Model.Thumbnail" class="img-fluid rounded mb-3 img-postagem"  alt="@Model.Nome">
                 <p>@Html.Raw(Model.Texto)</p>
             </article>
         </div>
@@ -65,6 +65,16 @@
                         <li>
                             <a href="#" class="mb-2 text-decoration-none">
                                 Chrollo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mb-2 text-decoration-none">
+                                Neferpitou
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mb-2 text-decoration-none">
+                                Feitan
                             </a>
                         </li>
                     </ul>
